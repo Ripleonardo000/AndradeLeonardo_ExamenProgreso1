@@ -1,9 +1,20 @@
 
 using Microsoft.EntityFrameworkCore;
 using AndradeLeonardo_ExamenProgreso1.DatosLeonardoAndrade;
+using Microsoft.Extensions.DependencyInjection;
+using AndradeLeonardo_ExamenProgreso1.Data;
 var builder = WebApplication.CreateBuilder(args);
 
+
+builder.Services.AddDbContext<AndradeLeonardo_ExamenProgreso1Context>(options =>
+
+    options.UseSqlServer(builder.Configuration.GetConnectionString("AndradeLeonardo_ExamenProgreso1Context") ?? throw new InvalidOperationException("Connection string 'AndradeLeonardo_ExamenProgreso1Context' not found.")));
+
 //Conexion sql server local e mssqllocal
+
+
+builder.Services.AddDbContext<ApplicationDbContext>(opciones =>
+opciones.UseSqlServer(builder.Configuration.GetConnectionString("AndradeLeonardo_ExamenProgreso1Context")));
 
 
 
