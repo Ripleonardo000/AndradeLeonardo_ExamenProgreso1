@@ -14,7 +14,7 @@ builder.Services.AddDbContext<AndradeLeonardo_ExamenProgreso1Context>(options =>
 
 
 builder.Services.AddDbContext<ApplicationDbContext>(opciones =>
-opciones.UseSqlServer(builder.Configuration.GetConnectionString("AndradeLeonardo_ExamenProgreso1Context")));
+opciones.UseSqlServer(builder.Configuration.GetConnectionString("AndradeLeonardo_ExamenProgreso1")));
 
 
 
