@@ -1,4 +1,21 @@
+
+using Microsoft.EntityFrameworkCore;
+using AndradeLeonardo_ExamenProgreso1.DatosLeonardoAndrade;
 var builder = WebApplication.CreateBuilder(args);
+
+//Conexion sql server local e mssqllocal
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
